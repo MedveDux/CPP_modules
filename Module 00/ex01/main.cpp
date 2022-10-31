@@ -16,18 +16,21 @@ void print_messenger()
 
 int main(void)
 {
-    PhoneBook phonebook;
+    PhoneBook phoneBook;
     print_messenger();
     std::string mes;
     std::cout << ">";
     while (getline(std::cin, mes))
     {
+        if (mes == "ADD")
+            phoneBook.addContact();
+        else if (mes == "SEARCH")
+            phoneBook.searchContact();
+        else if (mes == "EXIT")
+			phoneBook.exitFunc();
+		else
+			std::cout << "PhoneBook can only accept ADD SEARCH EXIT commands" << std::endl;	
         std::cout << ">";
-        if (mes.empty())
-            std::cout << "\tEmty string\n<" ;
-        else if (mes == "ADD")
-            phonebook.addContact();
-        
     }
     return (0);
 }
