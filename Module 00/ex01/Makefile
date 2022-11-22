@@ -1,9 +1,10 @@
 .PHONY:		all clean fclean re
 
-NAME	=	megaphone
+NAME	=	phonebook
 
 CC		=	c++
-SRC		=	megaphone.cpp
+SRC		=	main.cpp Contact.cpp PhoneBook.cpp
+HEADERS	= 	Contact.hpp PhoneBook.hpp
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 OBJ 	=	$(patsubst %.cpp, %.o, $(SRC))
@@ -15,7 +16,7 @@ all:		$(NAME)
 $(NAME):	$(OBJ)
 			$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 			
-%.o : %.cpp	Makefile
+%.o : %.cpp	Makefile $(HEADERS)
 			$(CC) $(FLAGS)  -c $< -o $@
 
 clean:

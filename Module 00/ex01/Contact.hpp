@@ -1,5 +1,3 @@
-
-
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include <string>
@@ -25,5 +23,8 @@ class Contact {
         std::string getPhoneNumber(void);
         std::string getDarkestSecret(void);
         void    displayInfoOfElem(void);
+        void	setNull(void);//
+        int     checkContant(std::string get);
+        
 };
 #endif

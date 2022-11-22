@@ -10,10 +10,21 @@
 
     }
 
-    int checkContant(std::string get)
+    void	Contact:: setNull(void)
     {
+        this->_firstName = "";
+        this->_lastName = "";
+        this->_nickName = "";
+        this->_phoneNumber = "";
+        this->_darkestSecret = "";
+    }
+
+    int Contact:: checkContant(std::string get)
+    {
+
         if (get.empty())
         {
+            setNull();
             std::cout << "Error: cannot create empty contact" << std::endl;
             return (1);
         }
@@ -56,7 +67,7 @@
         std::cout << "Last name: " << this->_lastName << std::endl;
         std::cout << "Nickname: " << this->_nickName << std::endl;
         std::cout << "Phone number: " << this->_phoneNumber << std::endl;
-        std::cout << "Darkest secret " << this->_darkestSecret << "\n" << std::endl;
+        std::cout << "Darkest secret: " << this->_darkestSecret << "\n" << std::endl;
     }
     int Contact:: setContact(int index)
     {
