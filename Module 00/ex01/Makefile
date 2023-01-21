@@ -3,7 +3,7 @@
 NAME	=	phonebook
 
 CC		=	c++
-SRC		=	main.cpp Contact.cpp PhoneBook.cpp
+SRC		=	Main.cpp Contact.cpp PhoneBook.cpp
 HEADERS	= 	Contact.hpp PhoneBook.hpp
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
